@@ -38,6 +38,7 @@ const courses = [
         ],
         completed: true
     },
+    
     {
         subject: 'CSE',
         number: 111,
