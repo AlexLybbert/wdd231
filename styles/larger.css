@@ -1,0 +1,19 @@
+/* Larger screen enhancements - required media query */
+@media (min-width: 768px) {
+  .hero { padding: 2rem 0; }
+  .hero h1 { font-size: 2.4rem; }
+  .site-header { padding-top: 0; padding-bottom: 0; }
+  .header-inner { align-items: center; }
+  .course-grid { gap: 1rem; }
+  .project-grid { gap: 1rem; }
+  .main-nav a { padding: .45rem 1rem; }
+  .filter-row { justify-content: start; }
+  .contact form { max-width: 640px; margin: 0 auto; }
+}
+@media (min-width: 1024px) {
+  .header-inner { gap: 2rem; }
+  .site-name { font-size: 1.3rem; }
+  .course-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .project-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .hero p { width: 75%; }
+}
