@@ -1,0 +1,76 @@
+@media (min-width: 640px) {
+  .site-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .main-nav {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: auto;
+    margin: 0;
+  }
+
+  .nav__list {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .nav__list a {
+    padding: 0.5rem 0;
+  }
+
+  .page-content {
+    padding: 2rem 2.5rem 3rem;
+  }
+
+  .directory__header {
+    gap: 1.5rem;
+  }
+
+  .members {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .members {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .site-footer {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    text-align: left;
+    justify-items: start;
+  }
+
+  .footer__meta {
+    align-self: center;
+  }
+}
+
+/* List view adjustments */
+.members.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.members.list .member-card {
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+.members.list .member-card__logo {
+  width: 100%;
+  height: 9rem;
+}

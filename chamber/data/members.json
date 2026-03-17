@@ -1,0 +1,72 @@
+[
+  {
+    "companyName": "Evergreen Landscaping",
+    "address": "123 Pine Street, Washington, ST 12345",
+    "phone": "(555) 101-0101",
+    "website": "https://www.evergreenlandscaping.com",
+    "image": "evergreen.jpg",
+    "membershipLevel": 3,
+    "email": "info@evergreenlandscaping.com",
+    "category": "Landscaping & Gardening"
+  },
+  {
+    "companyName": "Cascade Coffee Roasters",
+    "address": "456 Maple Avenue, Washington, ST 12345",
+    "phone": "(555) 202-0202",
+    "website": "https://www.cascadecoffee.com",
+    "image": "cascade.jpg",
+    "membershipLevel": 2,
+    "email": "contact@cascadecoffee.com",
+    "category": "Food & Beverage"
+  },
+  {
+    "companyName": "Pioneer Tech Solutions",
+    "address": "789 Cedar Lane, Washington, ST 12345",
+    "phone": "(555) 303-0303",
+    "website": "https://www.pioneertech.com",
+    "image": "pioneer.jpg",
+    "membershipLevel": 3,
+    "email": "support@pioneertech.com",
+    "category": "IT Services"
+  },
+  {
+    "companyName": "Maple Health Clinic",
+    "address": "321 Oak Street, Washington, ST 12345",
+    "phone": "(555) 404-0404",
+    "website": "https://www.maplehealth.com",
+    "image": "mapleclinic.jpg",
+    "membershipLevel": 1,
+    "email": "appointments@maplehealth.com",
+    "category": "Healthcare"
+  },
+  {
+    "companyName": "Summit Financial Group",
+    "address": "654 Birch Road, Washington, ST 12345",
+    "phone": "(555) 505-0505",
+    "website": "https://www.summitfinancial.com",
+    "image": "summit.jpg",
+    "membershipLevel": 2,
+    "email": "info@summitfinancial.com",
+    "category": "Finance & Insurance"
+  },
+  {
+    "companyName": "Lakeside Bookstore",
+    "address": "987 Willow Avenue, Washington, ST 12345",
+    "phone": "(555) 606-0606",
+    "website": "https://www.lakesidebooks.com",
+    "image": "lakeside.jpg",
+    "membershipLevel": 1,
+    "email": "hello@lakesidebooks.com",
+    "category": "Retail"
+  },
+  {
+    "companyName": "Mountainview Yoga Studio",
+    "address": "159 Spruce Street, Washington, ST 12345",
+    "phone": "(555) 707-0707",
+    "website": "https://www.mountainviewyoga.com",
+    "image": "mountainview.jpg",
+    "membershipLevel": 3,
+    "email": "info@mountainviewyoga.com",
+    "category": "Health & Wellness"
+  }
+]
