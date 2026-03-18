@@ -148,3 +148,5 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
+document.getElementById('lastModified').textContent = document.lastModified;
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
