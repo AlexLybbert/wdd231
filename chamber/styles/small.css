@@ -277,15 +277,15 @@ p {
 .view-toggle:hover,
 .view-toggle:focus {
   border-color: var(--color-primary);
-  background: rgba(14, 58, 111, 0.05);
+  background: #dce8f6;
   outline: none;
 }
 
 .view-toggle[aria-pressed="true"] {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  border-color: var(--accent);
-  color: var(--surface);
-  box-shadow: 0 4px 12px rgba(14, 58, 111, 0.25);
+  background: #dce8f6;
+  border-color: var(--accent-2);
+  color: var(--accent);
+  box-shadow: 0 4px 12px rgba(14, 58, 111, 0.12);
 }
 
 .members {
