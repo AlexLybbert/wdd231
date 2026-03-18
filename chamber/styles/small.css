@@ -21,7 +21,7 @@
   --radius: 0.75rem;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
-  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font: "Nunito Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --max-width: 1200px;
   --transition: all 200ms ease;
 }
@@ -207,14 +207,14 @@ p {
 
 .nav-list a:hover,
 .nav-list a:focus {
-  background: rgba(14, 58, 111, 0.08);
+  background: #dce8f6;
   color: var(--accent);
   outline: none;
 }
 
 .nav-list a.active,
 .nav-list a[aria-current="page"] {
-  background: rgba(14, 58, 111, 0.14);
+  background: #dce8f6;
   color: var(--color-primary);
   border-left: 3px solid var(--accent-2);
   padding: 0.65rem 0.75rem 0.65rem calc(0.75rem - 3px);
@@ -523,7 +523,7 @@ p {
   padding: 1rem;
   border-left: 4px solid var(--error);
   border-radius: var(--radius);
-  background: rgba(177, 35, 34, 0.05);
+  background: #fdeeed;
   color: var(--error);
   font-weight: 600;
 }
@@ -595,10 +595,10 @@ p {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: var(--radius);
-  background: rgba(14, 58, 111, 0.08);
+  background: var(--surface);
   color: var(--accent);
   transition: var(--transition);
-  border: 1px solid transparent;
+  border: 1px solid var(--color-border);
 }
 
 .footer-social a:hover,
