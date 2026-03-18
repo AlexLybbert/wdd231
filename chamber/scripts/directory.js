@@ -29,13 +29,13 @@ function badgeFor(level) {
 
   if (level === 3) {
     span.textContent = "Gold";
-    span.classList.add("member-badge--3");
+    span.classList.add("level-3");
   } else if (level === 2) {
     span.textContent = "Silver";
-    span.classList.add("member-badge--2");
+    span.classList.add("level-2");
   } else {
     span.textContent = "Member";
-    span.classList.add("member-badge--1");
+    span.classList.add("level-1");
   }
 
   return span;
@@ -45,8 +45,9 @@ function buildCard(member) {
   const card = document.createElement("article");
   card.className = "member-card";
 
+  // Logo
   const logoWrap = document.createElement("div");
-  logoWrap.className = "member-card__logo";
+  logoWrap.className = "member-logo";
 
   const img = document.createElement("img");
   img.src = `images/${member.image}`;
@@ -54,8 +55,9 @@ function buildCard(member) {
 
   logoWrap.appendChild(img);
 
+  // Content
   const content = document.createElement("div");
-  content.className = "member-card__content";
+  content.className = "member-content";
 
   const header = document.createElement("div");
   header.style.display = "flex";
@@ -63,18 +65,18 @@ function buildCard(member) {
   header.style.gap = ".5rem";
 
   const name = document.createElement("h2");
-  name.className = "member-card__name";
+  name.className = "member-name";
   name.textContent = member.companyName;
 
   header.appendChild(name);
   header.appendChild(badgeFor(member.membershipLevel));
 
   const tagline = document.createElement("p");
-  tagline.className = "member-card__tagline";
+  tagline.className = "member-tagline";
   tagline.textContent = member.tagline || "Local business member";
 
   const info = document.createElement("div");
-  info.className = "member-card__meta";
+  info.className = "member-meta";
 
   const address = document.createElement("p");
   address.textContent = member.address;
@@ -149,4 +151,4 @@ function init() {
 
 document.addEventListener("DOMContentLoaded", init);
 document.getElementById('lastModified').textContent = document.lastModified;
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+document.getElementById('currentYear').textContent = new Date().getFullYear();
