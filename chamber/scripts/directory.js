@@ -38,6 +38,7 @@ function badgeFor(level) {
     span.classList.add("level-1");
   }
 
+  span.setAttribute("aria-label", `${span.textContent} member`);
   return span;
 }
 
@@ -45,7 +46,6 @@ function buildCard(member) {
   const card = document.createElement("article");
   card.className = "member-card";
 
-  // Logo
   const logoWrap = document.createElement("div");
   logoWrap.className = "member-logo";
 
@@ -55,14 +55,11 @@ function buildCard(member) {
 
   logoWrap.appendChild(img);
 
-  // Content
   const content = document.createElement("div");
   content.className = "member-content";
 
   const header = document.createElement("div");
-  header.style.display = "flex";
-  header.style.alignItems = "center";
-  header.style.gap = ".5rem";
+  header.className = "member-heading";
 
   const name = document.createElement("h2");
   name.className = "member-name";
@@ -89,6 +86,7 @@ function buildCard(member) {
   site.target = "_blank";
   site.rel = "noopener";
   site.textContent = member.website.replace(/^https?:\/\//, "");
+  site.setAttribute("aria-label", `Visit ${member.companyName} website`);
 
   info.append(address, phone, site);
   content.append(header, tagline, info);
@@ -116,39 +114,29 @@ async function showMembers(view = "grid") {
   membersContainer.innerHTML = "";
   changeView(view);
 
+  if (members.length === 0) {
+    return;
+  }
+
+  const fragment = document.createDocumentFragment();
   members.forEach(m => {
     const card = buildCard(m);
-    membersContainer.appendChild(card);
+    fragment.appendChild(card);
   });
+  membersContainer.appendChild(fragment);
 }
 
 function setupViewButtons() {
   viewButtons.forEach(btn => {
     btn.addEventListener("click", () => {
-      changeView(btn.dataset.view);
+      showMembers(btn.dataset.view);
     });
   });
-}
-
-function updateFooter() {
-  const year = document.getElementById("currentYear");
-  const modified = document.getElementById("lastModified");
-
-  if (year) {
-    year.textContent = new Date().getFullYear();
-  }
-
-  if (modified) {
-    modified.textContent = document.lastModified;
-  }
 }
 
 function init() {
   setupViewButtons();
   showMembers();
-  updateFooter();
 }
 
 document.addEventListener("DOMContentLoaded", init);
-document.getElementById('lastModified').textContent = document.lastModified;
-document.getElementById('currentYear').textContent = new Date().getFullYear();

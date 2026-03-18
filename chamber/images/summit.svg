@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Summit Financial Group logo</title>
+  <desc id="desc">Mountain chart icon for Summit Financial Group.</desc>
+  <rect width="240" height="240" rx="32" fill="#f7f7fb"/>
+  <path d="M40 180 94 92l26 34 30-48 50 102H40z" fill="#264653"/>
+  <path d="M40 180h160" stroke="#2a9d8f" stroke-width="8" stroke-linecap="round"/>
+  <path d="M72 154 104 122l23 20 40-48" fill="none" stroke="#e9c46a" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+  <circle cx="167" cy="94" r="8" fill="#e76f51"/>
+  <text x="120" y="214" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#264653">SUMMIT</text>
+</svg>

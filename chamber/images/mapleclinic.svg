@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Maple Health Clinic logo</title>
+  <desc id="desc">Medical cross icon for Maple Health Clinic.</desc>
+  <rect width="240" height="240" rx="32" fill="#eef7f2"/>
+  <circle cx="120" cy="110" r="68" fill="#2d6a4f" opacity="0.12"/>
+  <path d="M104 58h32v40h40v32h-40v40h-32v-40H64V98h40V58z" fill="#2d6a4f"/>
+  <path d="M78 190h84" stroke="#40916c" stroke-linecap="round" stroke-width="10"/>
+  <text x="120" y="216" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#1b4332">MAPLE HEALTH</text>
+</svg>

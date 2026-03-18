@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Cascade Coffee Roasters logo</title>
+  <desc id="desc">Stylized coffee cup icon for Cascade Coffee Roasters.</desc>
+  <rect width="240" height="240" rx="32" fill="#1d3557"/>
+  <circle cx="120" cy="120" r="76" fill="#f1faee" opacity="0.14"/>
+  <path d="M83 90h61c18 0 32 14 32 32s-14 32-32 32H92c-17 0-31-14-31-31V90h22v33c0 5 4 9 9 9h52c6 0 10-4 10-10s-4-10-10-10H83V90z" fill="#f1faee"/>
+  <path d="M102 70c-9 12-8 21 1 31M126 66c-9 13-8 22 1 32M149 70c-9 12-8 21 1 31" fill="none" stroke="#f4a261" stroke-linecap="round" stroke-width="9"/>
+  <text x="120" y="205" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#f1faee">CASCADE</text>
+</svg>

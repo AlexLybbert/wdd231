@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Pioneer Tech Solutions logo</title>
+  <desc id="desc">Circuit-inspired monogram for Pioneer Tech Solutions.</desc>
+  <rect width="240" height="240" rx="32" fill="#0b132b"/>
+  <rect x="52" y="52" width="136" height="136" rx="24" fill="#1c2541" stroke="#5bc0be" stroke-width="6"/>
+  <path d="M92 82h38c24 0 41 15 41 37 0 24-19 40-44 40h-12v26H92V82zm23 21v35h11c13 0 21-7 21-18 0-10-7-17-20-17h-12z" fill="#ffffff"/>
+  <path d="M52 120H30M210 120h-22M120 52V30M120 210v-22" stroke="#5bc0be" stroke-linecap="round" stroke-width="8"/>
+  <circle cx="30" cy="120" r="7" fill="#5bc0be"/>
+  <circle cx="210" cy="120" r="7" fill="#5bc0be"/>
+  <circle cx="120" cy="30" r="7" fill="#5bc0be"/>
+  <circle cx="120" cy="210" r="7" fill="#5bc0be"/>
+</svg>
