@@ -34,6 +34,23 @@
     padding: 2rem 2.5rem 3rem;
   }
 
+  .page-content.home-main {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .home-content {
+    padding: 2rem 2.5rem 3rem;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .spotlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .directory-header {
     gap: 1.5rem;
   }
@@ -83,6 +100,10 @@
 @media (min-width: 1024px) {
   .members {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .spotlights-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .site-footer {

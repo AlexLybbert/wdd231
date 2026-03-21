@@ -19,6 +19,7 @@
   <meta property="og:url" content="https://alexlybbert.github.io/wdd231/chamber/index.html">
   <meta property="og:type" content="website">
   <script src="scripts/site.js" defer></script>
+  <script src="scripts/home.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -46,13 +47,83 @@
     </nav>
   </header>
 
-  <main class="page-content">
-    <section class="directory">
-      <header class="directory-header">
-        <h1 class="directory-title">Home</h1>
-      </header>
-      <p class="notice">Home page content coming soon.</p>
+  <main class="page-content home-main">
+    <section class="hero">
+      <img src="images/hero.svg" alt="Washington city skyline at night" class="hero-img">
+      <div class="hero-content">
+        <h1 class="hero-title">Washington Chamber of Commerce</h1>
+        <p class="hero-subtitle">Connecting local businesses and strengthening our community since 1952.</p>
+        <a href="join.html" class="cta-button">Join the Chamber &rarr;</a>
+      </div>
     </section>
+
+    <div class="home-content">
+      <div class="home-grid">
+        <section class="home-section">
+          <h2 class="home-section-title">📅 Upcoming Events</h2>
+          <ul class="events-list">
+            <li class="event-item">
+              <div class="event-date">
+                <span class="event-month">APR</span>
+                <span class="event-day">12</span>
+              </div>
+              <div class="event-info">
+                <h3>Spring Business Mixer</h3>
+                <p>Join fellow members for an evening of networking at the Washington Convention Center. Light refreshments provided.</p>
+                <p class="event-meta">6:00 PM – 9:00 PM &middot; Convention Center, 410 Main St.</p>
+              </div>
+            </li>
+            <li class="event-item">
+              <div class="event-date">
+                <span class="event-month">APR</span>
+                <span class="event-day">24</span>
+              </div>
+              <div class="event-info">
+                <h3>New Member Orientation</h3>
+                <p>Learn about Chamber membership benefits and resources, and meet our staff and board.</p>
+                <p class="event-meta">10:00 AM – 11:30 AM &middot; Chamber Office, 410 Main St.</p>
+              </div>
+            </li>
+            <li class="event-item">
+              <div class="event-date">
+                <span class="event-month">MAY</span>
+                <span class="event-day">3</span>
+              </div>
+              <div class="event-info">
+                <h3>Small Business Saturday Kick-off</h3>
+                <p>Celebrate our local small businesses with the community at the annual kick-off festival.</p>
+                <p class="event-meta">All Day &middot; Downtown Washington</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="home-section" id="weather-container">
+          <h2 class="home-section-title">🌤 Local Weather</h2>
+          <div id="weather-current">
+            <p class="weather-loading">Loading current conditions&hellip;</p>
+          </div>
+          <h3 class="forecast-title">3-Day Forecast</h3>
+          <div id="weather-forecast" class="forecast-grid"></div>
+        </section>
+      </div>
+
+      <section class="home-section spotlights-section">
+        <h2 class="home-section-title">⭐ Member Spotlights</h2>
+        <p class="spotlights-intro">Discover some of our outstanding Gold and Silver member businesses.</p>
+        <div id="spotlights" class="spotlights-grid">
+          <p>Loading spotlights&hellip;</p>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="cta-box">
+          <h2>Ready to grow your business?</h2>
+          <p>Become a Chamber member and connect with hundreds of local businesses, access exclusive resources, and make a difference in the community.</p>
+          <a href="join.html" class="cta-button cta-button--dark">Become a Member &rarr;</a>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">

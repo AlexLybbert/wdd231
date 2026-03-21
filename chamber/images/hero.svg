@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#020c1c"/>
+      <stop offset="60%" stop-color="#0e3a6f"/>
+      <stop offset="100%" stop-color="#1a5abf"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#2a6abf" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#2a6abf" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="420" fill="url(#bg)"/>
+  <!-- Glow behind center building -->
+  <rect width="1200" height="420" fill="url(#glow)"/>
+
+  <!-- Stars -->
+  <g fill="white">
+    <circle cx="48"   cy="28"  r="1.4" opacity="0.8"/>
+    <circle cx="118"  cy="14"  r="1.0" opacity="0.6"/>
+    <circle cx="198"  cy="42"  r="1.4" opacity="0.7"/>
+    <circle cx="308"  cy="19"  r="1.0" opacity="0.9"/>
+    <circle cx="382"  cy="54"  r="1.4" opacity="0.5"/>
+    <circle cx="448"  cy="10"  r="1.0" opacity="0.7"/>
+    <circle cx="528"  cy="33"  r="1.0" opacity="0.6"/>
+    <circle cx="672"  cy="23"  r="1.0" opacity="0.8"/>
+    <circle cx="748"  cy="44"  r="1.4" opacity="0.6"/>
+    <circle cx="822"  cy="14"  r="1.0" opacity="0.7"/>
+    <circle cx="888"  cy="36"  r="1.8" opacity="0.5"/>
+    <circle cx="968"  cy="21"  r="1.0" opacity="0.8"/>
+    <circle cx="1052" cy="47"  r="1.4" opacity="0.6"/>
+    <circle cx="1128" cy="17"  r="1.0" opacity="0.7"/>
+    <circle cx="74"   cy="64"  r="1.0" opacity="0.5"/>
+    <circle cx="278"  cy="69"  r="1.0" opacity="0.4"/>
+    <circle cx="702"  cy="58"  r="1.0" opacity="0.5"/>
+    <circle cx="998"  cy="53"  r="1.0" opacity="0.6"/>
+    <circle cx="155"  cy="78"  r="0.8" opacity="0.4"/>
+    <circle cx="470"  cy="72"  r="0.8" opacity="0.5"/>
+    <circle cx="840"  cy="66"  r="0.8" opacity="0.5"/>
+    <circle cx="1090" cy="74"  r="0.8" opacity="0.4"/>
+  </g>
+
+  <!-- ── Left buildings ── -->
+  <rect x="0"   y="305" width="58"  height="115" fill="#03101f" opacity="0.95"/>
+  <rect x="18"  y="283" width="24"  height="137" fill="#03101f" opacity="0.95"/>
+  <rect x="62"  y="318" width="44"  height="102" fill="#051628" opacity="0.95"/>
+  <rect x="78"  y="298" width="18"  height="122" fill="#051628" opacity="0.95"/>
+
+  <!-- Left skyscraper -->
+  <rect x="120" y="255" width="52"  height="165" fill="#03101f" opacity="0.95"/>
+  <rect x="134" y="235" width="14"  height="185" fill="#03101f" opacity="0.95"/>
+  <rect x="140" y="208" width="3"   height="28"  fill="#07213d" opacity="0.9"/>
+
+  <rect x="178" y="278" width="62"  height="142" fill="#051628" opacity="0.95"/>
+  <rect x="196" y="262" width="24"  height="158" fill="#051628" opacity="0.95"/>
+
+  <rect x="248" y="295" width="52"  height="125" fill="#03101f" opacity="0.95"/>
+  <rect x="300" y="268" width="66"  height="152" fill="#051628" opacity="0.95"/>
+  <rect x="318" y="248" width="24"  height="172" fill="#051628" opacity="0.95"/>
+  <rect x="328" y="222" width="3"   height="27"  fill="#07213d" opacity="0.9"/>
+
+  <rect x="378" y="308" width="48"  height="112" fill="#03101f" opacity="0.95"/>
+
+  <!-- ── Center government building ── -->
+  <!-- Base block -->
+  <rect x="435" y="222" width="330" height="198" fill="#03101f" opacity="0.97"/>
+
+  <!-- Columns -->
+  <g fill="#07213d" opacity="0.95">
+    <rect x="450" y="198" width="11" height="222"/>
+    <rect x="477" y="198" width="11" height="222"/>
+    <rect x="504" y="198" width="11" height="222"/>
+    <rect x="531" y="198" width="11" height="222"/>
+    <rect x="558" y="198" width="11" height="222"/>
+    <rect x="585" y="198" width="11" height="222"/>
+    <rect x="612" y="198" width="11" height="222"/>
+    <rect x="639" y="198" width="11" height="222"/>
+    <rect x="666" y="198" width="11" height="222"/>
+    <rect x="693" y="198" width="11" height="222"/>
+    <rect x="720" y="198" width="11" height="222"/>
+    <rect x="743" y="198" width="11" height="222"/>
+  </g>
+
+  <!-- Pediment (triangular cornice) -->
+  <polygon points="430,198 600,132 770,198" fill="#051628" opacity="0.97"/>
+
+  <!-- Dome base drum -->
+  <rect x="560" y="96"  width="80" height="40"  fill="#07213d" opacity="0.97"/>
+  <rect x="570" y="76"  width="60" height="24"  fill="#051628" opacity="0.97"/>
+
+  <!-- Dome body -->
+  <ellipse cx="600" cy="96"  rx="48" ry="36"  fill="#051628" opacity="0.97"/>
+  <ellipse cx="600" cy="91"  rx="32" ry="25"  fill="#07213d" opacity="0.97"/>
+
+  <!-- Dome lantern -->
+  <rect x="594" y="62"  width="12" height="30"  fill="#03101f" opacity="0.97"/>
+  <rect x="598" y="44"  width="4"  height="20"  fill="#07213d" opacity="0.97"/>
+
+  <!-- Flag (subtle glow) -->
+  <rect x="599" y="24"  width="2"  height="20"  fill="#1a5abf" opacity="0.7"/>
+
+  <!-- Lit windows (very subtle) -->
+  <g opacity="0.22" fill="#4a90e2">
+    <rect x="458" y="242" width="8" height="8"/>
+    <rect x="488" y="237" width="8" height="8"/>
+    <rect x="562" y="242" width="8" height="8"/>
+    <rect x="624" y="237" width="8" height="8"/>
+    <rect x="682" y="242" width="8" height="8"/>
+    <rect x="722" y="237" width="8" height="8"/>
+  </g>
+
+  <!-- ── Right buildings ── -->
+  <rect x="762" y="308" width="48"  height="112" fill="#03101f" opacity="0.95"/>
+
+  <rect x="814" y="268" width="66"  height="152" fill="#051628" opacity="0.95"/>
+  <rect x="832" y="248" width="24"  height="172" fill="#051628" opacity="0.95"/>
+  <rect x="842" y="222" width="3"   height="27"  fill="#07213d" opacity="0.9"/>
+
+  <rect x="892" y="295" width="52"  height="125" fill="#03101f" opacity="0.95"/>
+
+  <rect x="952" y="278" width="62"  height="142" fill="#051628" opacity="0.95"/>
+  <rect x="970" y="262" width="24"  height="158" fill="#051628" opacity="0.95"/>
+
+  <!-- Right skyscraper -->
+  <rect x="1034" y="255" width="52" height="165" fill="#03101f" opacity="0.95"/>
+  <rect x="1048" y="235" width="14" height="185" fill="#03101f" opacity="0.95"/>
+  <rect x="1054" y="208" width="3"  height="28"  fill="#07213d" opacity="0.9"/>
+
+  <rect x="1106" y="298" width="18" height="122" fill="#051628" opacity="0.95"/>
+  <rect x="1096" y="318" width="44" height="102" fill="#051628" opacity="0.95"/>
+  <rect x="1142" y="283" width="24" height="137" fill="#03101f" opacity="0.95"/>
+  <rect x="1142" y="305" width="58" height="115" fill="#03101f" opacity="0.95"/>
+
+  <!-- Ground line -->
+  <rect x="0" y="417" width="1200" height="3" fill="#010a15" opacity="0.9"/>
+</svg>
