@@ -47,6 +47,15 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .join-layout {
+    grid-template-columns: minmax(0, 1.3fr) minmax(18rem, 0.9fr);
+    align-items: start;
+  }
+
+  .thankyou-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .spotlights-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -100,6 +109,11 @@
 @media (min-width: 1024px) {
   .members {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .membership-cards {
+    position: sticky;
+    top: 6rem;
   }
 
   .spotlights-grid {

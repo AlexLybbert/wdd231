@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Washington Chamber of Commerce | Join</title>
-  <meta name="description" content="Learn about joining the Washington Chamber of Commerce.">
+  <meta name="description" content="Apply for membership with the Washington Chamber of Commerce.">
   <meta name="author" content="Alex Lybbert">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,11 +14,12 @@
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
   <meta property="og:title" content="Washington Chamber of Commerce - Join">
-  <meta property="og:description" content="Explore membership information for joining the Washington Chamber of Commerce.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/AlexLybbert/wdd231/main/chamber/images/og-image.svg">
+  <meta property="og:description" content="Explore membership options and apply to join the Washington Chamber of Commerce.">
+  <meta property="og:image" content="https://alexlybbert.github.io/wdd231/chamber/images/og-image.svg">
   <meta property="og:url" content="https://alexlybbert.github.io/wdd231/chamber/join.html">
   <meta property="og:type" content="website">
   <script src="scripts/site.js" defer></script>
+  <script src="scripts/join.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -47,12 +48,155 @@
   </header>
 
   <main class="page-content">
-    <section class="directory">
+    <section class="join-page">
       <header class="directory-header">
-        <h1 class="directory-title">Join</h1>
+        <div>
+          <h1 class="directory-title">Join the Chamber</h1>
+          <p class="join-intro">Choose a membership level, complete the application, and we will reach out with your next steps.</p>
+        </div>
       </header>
-      <p class="notice">Join page content coming soon.</p>
+
+      <div class="join-layout">
+        <section class="join-form-panel" aria-labelledby="application-heading">
+          <h2 id="application-heading" class="join-section-title">Membership Application</h2>
+          <form class="join-form" method="get" action="thankyou.html">
+            <label>
+              First Name
+              <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required>
+            </label>
+
+            <label>
+              Last Name
+              <input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required>
+            </label>
+
+            <label>
+              Organizational Title
+              <input type="text" name="organizationTitle" title="Enter your title within the organization using letters, spaces, or hyphens only" autocomplete="organization-title" pattern="[A-Za-z\\- ]{7,}" placeholder="Executive Director">
+            </label>
+
+            <label>
+              Email Address
+              <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="name@example.com" required>
+            </label>
+
+            <label>
+              Mobile Phone Number
+              <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+            </label>
+
+            <label>
+              Organization Name
+              <input type="text" name="organization" title="Enter your business or organization name" autocomplete="organization" required>
+            </label>
+
+            <label>
+              Membership Level
+              <select name="membershipLevel" title="Select a membership level" required>
+                <option value="">Choose a membership level</option>
+                <option value="np">NP Membership</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+              </select>
+            </label>
+
+            <label>
+              Organization Description
+              <textarea name="description" title="Describe your business or organization" rows="5"></textarea>
+            </label>
+
+            <input type="hidden" name="timestamp" id="timestamp">
+            <input type="submit" value="Submit Membership Application">
+          </form>
+        </section>
+
+        <aside class="membership-panel" aria-labelledby="membership-heading">
+          <h2 id="membership-heading" class="join-section-title">Membership Levels</h2>
+          <div class="membership-cards">
+            <article class="membership-card membership-card--np">
+              <p class="membership-tier">NP Membership</p>
+              <p class="membership-price">No annual fee</p>
+              <p class="membership-summary">Built for nonprofit organizations that want to connect with local partners and community events.</p>
+              <a href="#np-modal" class="membership-link" data-modal-target="np-modal">View benefits</a>
+            </article>
+
+            <article class="membership-card membership-card--bronze">
+              <p class="membership-tier">Bronze Membership</p>
+              <p class="membership-price">$250 per year</p>
+              <p class="membership-summary">A strong starting level for growing visibility and attending Chamber trainings.</p>
+              <a href="#bronze-modal" class="membership-link" data-modal-target="bronze-modal">View benefits</a>
+            </article>
+
+            <article class="membership-card membership-card--silver">
+              <p class="membership-tier">Silver Membership</p>
+              <p class="membership-price">$500 per year</p>
+              <p class="membership-summary">Adds stronger promotion, event discounts, and more direct access to member resources.</p>
+              <a href="#silver-modal" class="membership-link" data-modal-target="silver-modal">View benefits</a>
+            </article>
+
+            <article class="membership-card membership-card--gold">
+              <p class="membership-tier">Gold Membership</p>
+              <p class="membership-price">$1,000 per year</p>
+              <p class="membership-summary">Our premium level with top promotional placement, trainings, and VIP event perks.</p>
+              <a href="#gold-modal" class="membership-link" data-modal-target="gold-modal">View benefits</a>
+            </article>
+          </div>
+        </aside>
+      </div>
     </section>
+
+    <dialog id="np-modal" class="membership-modal" aria-labelledby="np-modal-title">
+      <div class="membership-modal-content">
+        <h2 id="np-modal-title">NP Membership Benefits</h2>
+        <p>NP members receive community calendar listings, nonprofit networking invitations, and access to Chamber training sessions.</p>
+        <ul class="membership-benefits">
+          <li>Free membership for qualifying nonprofits</li>
+          <li>Invitation to community partnership events</li>
+          <li>Listing in the chamber directory</li>
+        </ul>
+        <button type="button" class="modal-close" data-close-modal="np-modal">Close</button>
+      </div>
+    </dialog>
+
+    <dialog id="bronze-modal" class="membership-modal" aria-labelledby="bronze-modal-title">
+      <div class="membership-modal-content">
+        <h2 id="bronze-modal-title">Bronze Membership Benefits</h2>
+        <p>Bronze membership helps small businesses build visibility and learn from local business leaders.</p>
+        <ul class="membership-benefits">
+          <li>Everything in NP membership</li>
+          <li>Discounted admission to select Chamber events</li>
+          <li>Access to business training workshops</li>
+        </ul>
+        <button type="button" class="modal-close" data-close-modal="bronze-modal">Close</button>
+      </div>
+    </dialog>
+
+    <dialog id="silver-modal" class="membership-modal" aria-labelledby="silver-modal-title">
+      <div class="membership-modal-content">
+        <h2 id="silver-modal-title">Silver Membership Benefits</h2>
+        <p>Silver membership expands marketing opportunities and gives members a stronger presence in chamber promotions.</p>
+        <ul class="membership-benefits">
+          <li>Everything in Bronze membership</li>
+          <li>Featured placement in rotating chamber promotions</li>
+          <li>Additional discounts on sponsorships and events</li>
+        </ul>
+        <button type="button" class="modal-close" data-close-modal="silver-modal">Close</button>
+      </div>
+    </dialog>
+
+    <dialog id="gold-modal" class="membership-modal" aria-labelledby="gold-modal-title">
+      <div class="membership-modal-content">
+        <h2 id="gold-modal-title">Gold Membership Benefits</h2>
+        <p>Gold membership delivers top-tier exposure and premium engagement opportunities throughout the year.</p>
+        <ul class="membership-benefits">
+          <li>Everything in Silver membership</li>
+          <li>Spotlight placement on the home page</li>
+          <li>VIP invitations and premier event discounts</li>
+        </ul>
+        <button type="button" class="modal-close" data-close-modal="gold-modal">Close</button>
+      </div>
+    </dialog>
   </main>
 
   <footer class="site-footer">
@@ -72,9 +216,9 @@
     </div>
 
     <nav class="footer-social" aria-label="Social links">
-      <a href="#" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube" width="24" height="24"></a>
-      <a href="#" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter" width="24" height="24"></a>
-      <a href="#" aria-label="LinkedIn"><span aria-hidden="true">🔗</span></a>
+      <a href="https://www.youtube.com/" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube" width="24" height="24"></a>
+      <a href="https://x.com/" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter" width="24" height="24"></a>
+      <a href="https://www.linkedin.com/" aria-label="LinkedIn"><span aria-hidden="true">🔗</span></a>
     </nav>
   </footer>
 </body>

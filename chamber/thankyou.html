@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Washington Chamber of Commerce | Discover</title>
-  <meta name="description" content="Discover community information and local highlights in Washington.">
+  <title>Washington Chamber of Commerce | Thank You</title>
+  <meta name="description" content="Thank you for applying to join the Washington Chamber of Commerce.">
   <meta name="author" content="Alex Lybbert">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,12 +13,13 @@
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
-  <meta property="og:title" content="Washington Chamber of Commerce - Discover">
-  <meta property="og:description" content="Explore the Washington community and local highlights.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/AlexLybbert/wdd231/main/chamber/images/og-image.svg">
-  <meta property="og:url" content="https://alexlybbert.github.io/wdd231/chamber/discover.html">
+  <meta property="og:title" content="Washington Chamber of Commerce - Thank You">
+  <meta property="og:description" content="Review the information submitted to the Washington Chamber of Commerce membership application.">
+  <meta property="og:image" content="https://alexlybbert.github.io/wdd231/chamber/images/og-image.svg">
+  <meta property="og:url" content="https://alexlybbert.github.io/wdd231/chamber/thankyou.html">
   <meta property="og:type" content="website">
   <script src="scripts/site.js" defer></script>
+  <script src="scripts/thankyou.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -39,7 +40,7 @@
     <nav class="main-nav" aria-label="Primary">
       <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
-        <li><a href="discover.html" class="active" aria-current="page">Discover</a></li>
+        <li><a href="discover.html">Discover</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
       </ul>
@@ -47,11 +48,44 @@
   </header>
 
   <main class="page-content">
-    <section class="directory">
+    <section class="thankyou-page">
       <header class="directory-header">
-        <h1 class="directory-title">Discover</h1>
+        <div>
+          <h1 class="directory-title">Thank You</h1>
+          <p class="join-intro">Your membership application has been received. We appreciate your interest in the Washington Chamber of Commerce.</p>
+        </div>
       </header>
-      <p class="notice">Discover page content coming soon.</p>
+
+      <section class="thankyou-card" aria-labelledby="submission-heading">
+        <h2 id="submission-heading" class="join-section-title">Submitted Information</h2>
+        <div class="thankyou-grid">
+          <div class="thankyou-item">
+            <span class="thankyou-label">First Name</span>
+            <span id="summary-firstName" class="thankyou-value"></span>
+          </div>
+          <div class="thankyou-item">
+            <span class="thankyou-label">Last Name</span>
+            <span id="summary-lastName" class="thankyou-value"></span>
+          </div>
+          <div class="thankyou-item">
+            <span class="thankyou-label">Email</span>
+            <span id="summary-email" class="thankyou-value"></span>
+          </div>
+          <div class="thankyou-item">
+            <span class="thankyou-label">Mobile Number</span>
+            <span id="summary-phone" class="thankyou-value"></span>
+          </div>
+          <div class="thankyou-item">
+            <span class="thankyou-label">Organization</span>
+            <span id="summary-organization" class="thankyou-value"></span>
+          </div>
+          <div class="thankyou-item">
+            <span class="thankyou-label">Submitted</span>
+            <span id="summary-timestamp" class="thankyou-value"></span>
+          </div>
+        </div>
+        <p class="thankyou-note">A chamber representative will review your submission and contact you soon.</p>
+      </section>
     </section>
   </main>
 
