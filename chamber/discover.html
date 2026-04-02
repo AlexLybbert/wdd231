@@ -15,10 +15,11 @@
   <link rel="stylesheet" href="styles/larger.css">
   <meta property="og:title" content="Washington Chamber of Commerce - Discover">
   <meta property="og:description" content="Explore the Washington community and local highlights.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/AlexLybbert/wdd231/main/chamber/images/og-image.svg">
+  <meta property="og:image" content="https://alexlybbert.github.io/wdd231/chamber/images/og-image.svg">
   <meta property="og:url" content="https://alexlybbert.github.io/wdd231/chamber/discover.html">
   <meta property="og:type" content="website">
   <script src="scripts/site.js" defer></script>
+  <script type="module" src="scripts/discover.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -46,12 +47,26 @@
     </nav>
   </header>
 
-  <main class="page-content">
-    <section class="directory">
-      <header class="directory-header">
-        <h1 class="directory-title">Discover</h1>
+  <main class="page-content discover-page">
+    <section class="discover-shell" aria-labelledby="discover-heading">
+      <header class="directory-header discover-header">
+        <div>
+          <h1 id="discover-heading" class="directory-title">Discover Washington Area Highlights</h1>
+          <p class="discover-intro">Plan your next local outing with a mix of outdoor escapes, historic landmarks, and arts destinations around Washington and greater St. George.</p>
+        </div>
       </header>
-      <p class="notice">Discover page content coming soon.</p>
+
+      <section class="visit-banner" aria-labelledby="visit-message-heading">
+        <h2 id="visit-message-heading" class="visit-banner-title">Visitor Check-In</h2>
+        <output id="visit-message" class="visit-message" aria-live="polite">Loading your visit summary...</output>
+      </section>
+
+      <section>
+        <div id="discover-grid" class="discover-grid" aria-live="polite"></div>
+        <noscript>
+          <p class="notice">JavaScript is required to load the discover gallery and visit message.</p>
+        </noscript>
+      </section>
     </section>
   </main>
 

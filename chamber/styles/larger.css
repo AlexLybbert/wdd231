@@ -106,6 +106,47 @@
   }
 }
 
+@media (min-width: 641px) and (max-width: 1024px) {
+  .visit-banner {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.5rem 1rem;
+  }
+
+  .visit-banner-title {
+    margin-bottom: 0;
+  }
+
+  .discover-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "sand snow"
+      "quail tuacahn"
+      "temple temple"
+      "tabernacle winter"
+      "zion zion";
+  }
+
+  .discover-card {
+    padding: 1.15rem;
+  }
+
+  .discover-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--accent-2);
+  }
+
+  .discover-image {
+    transition: transform 220ms ease, filter 220ms ease;
+  }
+
+  .discover-card:hover .discover-image {
+    transform: scale(1.04);
+    filter: saturate(1.08) contrast(1.04);
+  }
+}
+
 @media (min-width: 1024px) {
   .members {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -130,5 +171,34 @@
 
   .footer-meta {
     align-self: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas:
+      "sand sand snow tuacahn"
+      "quail temple temple tuacahn"
+      "tabernacle winter zion zion";
+  }
+
+  .discover-card {
+    padding: 1.2rem;
+  }
+
+  .discover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--accent-2);
+  }
+
+  .discover-image {
+    transition: transform 220ms ease, filter 220ms ease;
+  }
+
+  .discover-card:hover .discover-image {
+    transform: scale(1.05);
+    filter: brightness(1.04) saturate(1.1);
   }
 }

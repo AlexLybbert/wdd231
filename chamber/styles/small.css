@@ -768,6 +768,128 @@ p {
   color: var(--color-muted);
 }
 
+.discover-page {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.discover-shell {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.discover-header {
+  margin-bottom: 0;
+}
+
+.discover-intro {
+  margin-top: 0.55rem;
+  color: var(--color-muted);
+  max-width: 44rem;
+}
+
+.visit-banner {
+  background: linear-gradient(135deg, rgba(14, 58, 111, 0.08), rgba(26, 90, 191, 0.16));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.visit-banner-title {
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.visit-message {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.discover-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "sand"
+    "snow"
+    "quail"
+    "tuacahn"
+    "temple"
+    "tabernacle"
+    "winter"
+    "zion";
+}
+
+.discover-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  display: grid;
+  gap: 0.85rem;
+  align-content: start;
+}
+
+.discover-card-title {
+  color: var(--accent);
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.discover-figure {
+  margin: 0;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  background: #dce8f6;
+}
+
+.discover-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.discover-address {
+  font-style: normal;
+  color: var(--accent-2);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.discover-description {
+  color: var(--color-muted);
+}
+
+.discover-button {
+  justify-self: start;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(14, 58, 111, 0.18);
+  transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
+}
+
+.discover-button:hover,
+.discover-button:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(14, 58, 111, 0.24);
+}
+
+.discover-button:focus {
+  outline: 3px solid rgba(26, 90, 191, 0.22);
+  outline-offset: 3px;
+}
+
 @keyframes membershipReveal {
   0% {
     opacity: 0;
@@ -1231,7 +1353,7 @@ p {
 
 .cta-box {
   background-color: var(--accent);
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  background-image: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
   border-radius: var(--radius);
   padding: 2rem 1.5rem;
   text-align: center;
