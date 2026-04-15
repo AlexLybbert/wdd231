@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our directory of sustainable food vendors including farmers' markets, CSAs, co-ops, and eco-friendly restaurants.">
+    <meta name="author" content="Alex Lybbert">
+    <meta property="og:title" content="Directory | The Foodstead">
+    <meta property="og:description" content="Browse and filter local sustainable vendors by category and food values.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexlybbert.github.io/wdd231/finalproject/directory.html">
+
+    <title>Directory - The Foodstead</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script type="module" src="scripts/directory.js"></script>
+    <script type="module" src="scripts/getdates.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🌱</span>
+                    <span class="logo-text">The Foodstead</span>
+                </a>
+                <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="siteNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html" class="active">Directory</a></li>
+                    <li><a href="contribute.html">Contribute</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="directory-page">
+        <section class="page-header">
+            <div class="container">
+                <h1>Sustainable Food Directory</h1>
+                <p>Explore local, sustainable food sources in your community</p>
+            </div>
+        </section>
+
+        <section class="directory-content">
+            <div class="container">
+                <aside class="filters-sidebar">
+                    <div class="filter-section">
+                        <h3>Search</h3>
+                        <input type="text" id="searchInput" placeholder="Search vendors..." class="search-input">
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Category</h3>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="all" checked>
+                                <span>All Categories</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="farmers-market">
+                                <span>Farmers' Market</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="csa">
+                                <span>CSA Program</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="coop">
+                                <span>Food Co-op</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="restaurant">
+                                <span>Restaurant</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Sustainability</h3>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="sustainability" value="local">
+                                <span>🌍 Local</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="sustainability" value="organic">
+                                <span>🌿 Organic</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="sustainability" value="seasonal">
+                                <span>🍂 Seasonal</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="sustainability" value="zero-waste">
+                                <span>♻️ Zero Waste</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="reset-filters" id="resetFilters">Reset Filters</button>
+                </aside>
+
+                <div class="vendor-results">
+                    <div class="results-header">
+                        <p class="results-count">Showing <span id="resultsCount">0</span> vendors</p>
+                        <select id="sortSelect" class="sort-select">
+                            <option value="name">Sort by Name</option>
+                            <option value="category">Sort by Category</option>
+                            <option value="distance">Sort by Distance</option>
+                        </select>
+                    </div>
+
+                    <div id="vendorGrid" class="vendor-grid">
+                        <!-- Vendors will be dynamically loaded here -->
+                    </div>
+
+                    <dialog id="vendorModal" class="vendor-modal" aria-labelledby="modalTitle">
+                        <div class="modal-content">
+                            <button id="closeModal" class="close-modal" type="button" aria-label="Close details">Close</button>
+                            <h2 id="modalTitle">Vendor Details</h2>
+                            <div id="modalBody"></div>
+                        </div>
+                    </dialog>
+
+                    <div id="noResults" class="no-results" style="display: none;">
+                        <p>No vendors match your search criteria.</p>
+                        <button class="cta-button" id="clearSearch">Clear Filters</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>The Foodstead</h3>
+                <p>Connecting communities with sustainable food sources.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="contribute.html">Contribute</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">Project Demo Video</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@foodstead.com</p>
+                <p>Building sustainable food communities.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © <span id="year"></span> Alex Lybbert | Utah (sort of)<br>
+            Last Modified: <span id="modified"></span>
+        </div>
+    </footer>
+</body>
+</html>

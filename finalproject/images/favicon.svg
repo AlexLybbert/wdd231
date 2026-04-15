@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="The Foodstead icon">
+  <rect width="64" height="64" rx="12" fill="#4E6E5D" />
+  <path d="M20 42c10 0 18-8 18-18v-2c-10 0-18 8-18 18v2zm8 4c10 0 18-8 18-18v-2c-10 0-18 8-18 18v2z" fill="#ACECA1" />
+  <circle cx="48" cy="18" r="4" fill="#E3A857" />
+</svg>

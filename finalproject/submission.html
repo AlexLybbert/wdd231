@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review your submitted vendor contribution details for The Foodstead.">
+    <meta name="author" content="Alex Lybbert">
+    <meta property="og:title" content="Contribution Received | The Foodstead">
+    <meta property="og:description" content="Review the vendor details you submitted to The Foodstead community directory.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexlybbert.github.io/wdd231/finalproject/submission.html">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <title>Contribution Received | The Foodstead</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script type="module" src="scripts/getdates.js"></script>
+    <script type="module">
+        const displayField = (id, value) => {
+            const node = document.getElementById(id);
+            if (node) {
+                node.textContent = value && value.trim() ? value : 'Not provided';
+            }
+        };
+
+        const params = new URLSearchParams(globalThis.location.search);
+        const sustainability = params.getAll('sustainability').join(', ');
+
+        displayField('submittedVendorName', params.get('vendorName') || 'Not provided');
+        displayField('submittedCategory', params.get('category') || 'Not provided');
+        displayField('submittedAddress', params.get('address') || 'Not provided');
+        displayField('submittedCity', params.get('city') || 'Not provided');
+        displayField('submittedState', params.get('state') || 'Not provided');
+        displayField('submittedZip', params.get('zipCode') || 'Not provided');
+        displayField('submittedPhone', params.get('phone') || 'Not provided');
+        displayField('submittedWebsite', params.get('website') || 'Not provided');
+        displayField('submittedHours', params.get('hours') || 'Not provided');
+        displayField('submittedSustainability', sustainability || 'Not provided');
+        displayField('submittedDescription', params.get('description') || 'Not provided');
+        displayField('submittedYourName', params.get('yourName') || 'Not provided');
+        displayField('submittedYourEmail', params.get('yourEmail') || 'Not provided');
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon" aria-hidden="true">🌱</span>
+                    <span class="logo-text">The Foodstead</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="contribute.html">Contribute</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="form-section">
+        <div class="container">
+            <section class="vendor-form" aria-labelledby="submissionTitle">
+                <h1 id="submissionTitle">Contribution Received</h1>
+                <p>Thank you for sharing a sustainable vendor with The Foodstead.</p>
+                <dl>
+                    <dt>Vendor Name</dt><dd id="submittedVendorName"></dd>
+                    <dt>Category</dt><dd id="submittedCategory"></dd>
+                    <dt>Address</dt><dd id="submittedAddress"></dd>
+                    <dt>City</dt><dd id="submittedCity"></dd>
+                    <dt>State</dt><dd id="submittedState"></dd>
+                    <dt>ZIP Code</dt><dd id="submittedZip"></dd>
+                    <dt>Phone</dt><dd id="submittedPhone"></dd>
+                    <dt>Website</dt><dd id="submittedWebsite"></dd>
+                    <dt>Hours</dt><dd id="submittedHours"></dd>
+                    <dt>Sustainability</dt><dd id="submittedSustainability"></dd>
+                    <dt>Description</dt><dd id="submittedDescription"></dd>
+                    <dt>Your Name</dt><dd id="submittedYourName"></dd>
+                    <dt>Your Email</dt><dd id="submittedYourEmail"></dd>
+                </dl>
+                <p><a class="cta-button" href="contribute.html">Submit another vendor</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>The Foodstead</h3>
+                <p>Connecting communities with sustainable food sources.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="attributions.html">Attributions</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">Project Demo Video</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Meta</h3>
+                <p>© <span id="year"></span> Alex Lybbert</p>
+                <p>Last Modified: <span id="modified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

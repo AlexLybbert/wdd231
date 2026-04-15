@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover sustainable food sources near you - farmers' markets, CSAs, co-ops, and eco-conscious restaurants.">
+    <meta name="author" content="Alex Lybbert">
+    <meta property="og:title" content="The Foodstead | Sustainable Food Directory">
+    <meta property="og:description" content="Connect with local farmers markets, CSAs, co-ops, and eco-conscious restaurants.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexlybbert.github.io/wdd231/finalproject/index.html">
+
+    <title>The Foodstead - Sustainable Food Directory</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script type="module" src="scripts/getdates.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🌱</span>
+                    <span class="logo-text">The Foodstead</span>
+                </a>
+                <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="siteNav">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="contribute.html">Contribute</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Discover Sustainable Food Near You</h1>
+                <p class="hero-subtitle">Connect with local farmers' markets, CSAs, co-ops, and eco-conscious restaurants in your community.</p>
+                <a href="directory.html" class="cta-button">Explore Directory</a>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card card-1">
+                    <span class="card-icon">🥬</span>
+                    <span class="card-text">Fresh & Local</span>
+                </div>
+                <div class="floating-card card-2">
+                    <span class="card-icon">♻️</span>
+                    <span class="card-text">Zero Waste</span>
+                </div>
+                <div class="floating-card card-3">
+                    <span class="card-icon">🌾</span>
+                    <span class="card-text">Organic</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose The Foodstead?</h2>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">📍</div>
+                        <h3>Find Local Sources</h3>
+                        <p>Discover sustainable food vendors in your neighborhood with our interactive directory and filters.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <h3>Support Sustainability</h3>
+                        <p>Every vendor is tagged with sustainability attributes: organic, local, seasonal, and zero-waste options.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Community Driven</h3>
+                        <p>Help others discover great sources by contributing vendor suggestions and sharing your experiences.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="150">0</div>
+                        <div class="stat-label">Sustainable Vendors</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="45">0</div>
+                        <div class="stat-label">Farmers' Markets</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="30">0</div>
+                        <div class="stat-label">CSA Programs</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="75">0</div>
+                        <div class="stat-label">Eco Restaurants</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Support Local Food?</h2>
+                <p>Start exploring sustainable food sources in your community today.</p>
+                <div class="cta-buttons">
+                    <a href="directory.html" class="cta-button">Browse Directory</a>
+                    <a href="contribute.html" class="cta-button secondary">Add a Vendor</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>The Foodstead</h3>
+                <p>Connecting communities with sustainable food sources.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="contribute.html">Contribute</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">Project Demo Video</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@foodstead.com</p>
+                <p>Building sustainable food communities.</p>
+            </div>
+        </div>
+        <div>
+            © <span id="year"></span> Alex Lybbert | Utah (sort of)<br>
+            Last Modified: <span id="modified"></span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contribute to The Foodstead by suggesting new sustainable food vendors in your community.">
+    <meta name="author" content="Alex Lybbert">
+    <meta property="og:title" content="Contribute | The Foodstead">
+    <meta property="og:description" content="Submit a sustainable vendor and help grow the community-driven directory.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexlybbert.github.io/wdd231/finalproject/contribute.html">
+
+    <title>Contribute - The Foodstead</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script type="module" src="scripts/contribute.js"></script>
+    <script type="module" src="scripts/getdates.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🌱</span>
+                    <span class="logo-text">The Foodstead</span>
+                </a>
+                <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="siteNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="contribute.html" class="active">Contribute</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contribute-page">
+        <section class="page-header">
+            <div class="container">
+                <h1>Contribute to Our Directory</h1>
+                <p>Know a great sustainable food source? Help our community discover it!</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="container">
+                <div class="form-intro">
+                    <h2>Suggest a Vendor</h2>
+                    <p>Share information about sustainable food vendors in your area. Your contributions help others discover local, eco-friendly food options.</p>
+                </div>
+
+                <form id="vendorForm" class="vendor-form" action="submission.html" method="get" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="vendorName">Vendor Name <span class="required">*</span></label>
+                            <input type="text" id="vendorName" name="vendorName" required>
+                            <span class="error-message" id="vendorNameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Category <span class="required">*</span></label>
+                            <select id="category" name="category" required>
+                                <option value="">Select a category</option>
+                                <option value="farmers-market">Farmers' Market</option>
+                                <option value="csa">CSA Program</option>
+                                <option value="coop">Food Co-op</option>
+                                <option value="restaurant">Restaurant</option>
+                            </select>
+                            <span class="error-message" id="categoryError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address <span class="required">*</span></label>
+                        <input type="text" id="address" name="address" required>
+                        <span class="error-message" id="addressError"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City <span class="required">*</span></label>
+                            <input type="text" id="city" name="city" required>
+                            <span class="error-message" id="cityError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="state">State <span class="required">*</span></label>
+                            <input type="text" id="state" name="state" maxlength="2" required>
+                            <span class="error-message" id="stateError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="zipCode">ZIP Code <span class="required">*</span></label>
+                            <input type="text" id="zipCode" name="zipCode" pattern="[0-9]{5}" required>
+                            <span class="error-message" id="zipCodeError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-555-5555">
+                        <span class="form-hint">Format: 555-555-5555</span>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="website">Website</label>
+                        <input type="url" id="website" name="website" placeholder="https://example.com">
+                        <span class="error-message" id="websiteError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hours">Hours of Operation</label>
+                        <textarea id="hours" name="hours" rows="3" placeholder="e.g., Mon-Fri: 9am-6pm, Sat: 8am-4pm"></textarea>
+                    </div>
+
+                    <fieldset class="form-group">
+                        <legend>Sustainability Features <span class="required">*</span></legend>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="sustainability" value="local">
+                                <span>🌍 Local Products</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="sustainability" value="organic">
+                                <span>🌿 Organic Options</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="sustainability" value="seasonal">
+                                <span>🍂 Seasonal Offerings</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="sustainability" value="zero-waste">
+                                <span>♻️ Zero Waste Practices</span>
+                            </label>
+                        </div>
+                        <span class="error-message" id="sustainabilityError"></span>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Tell us about this vendor and what makes them special..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="yourName">Your Name <span class="required">*</span></label>
+                        <input type="text" id="yourName" name="yourName" required>
+                        <span class="error-message" id="yourNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="yourEmail">Your Email <span class="required">*</span></label>
+                        <input type="email" id="yourEmail" name="yourEmail" required>
+                        <span class="form-hint">We'll only use this to contact you about your submission.</span>
+                        <span class="error-message" id="yourEmailError"></span>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="cta-button">Submit Vendor</button>
+                        <button type="reset" class="cta-button secondary">Clear Form</button>
+                    </div>
+                </form>
+
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <h3>Thank you for your contribution!</h3>
+                    <p>Your vendor suggestion has been submitted successfully. We'll review it and add it to our directory soon.</p>
+                    <button class="cta-button" id="submitAnother">Submit Another Vendor</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-submissions">
+            <div class="container">
+                <h2>Recent Submissions</h2>
+                <p class="section-subtitle">See what other community members have suggested</p>
+                <div id="recentSubmissions" class="submissions-grid">
+                    <!-- Recent submissions will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>The Foodstead</h3>
+                <p>Connecting communities with sustainable food sources.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="contribute.html">Contribute</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">Project Demo Video</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@foodstead.com</p>
+                <p>Building sustainable food communities.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © <span id="year"></span> Alex Lybbert | Utah (sort of)<br>
+            Last Modified: <span id="modified"></span>
+        </div>
+    </footer>
+</body>
+</html>
